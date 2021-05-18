@@ -1,0 +1,11 @@
+{
+    "name": "detechtives/m7-usarps-championship-2020",
+    "require": {
+        "doctrine/orm": "^2.8",
+        "symfony/yaml": "^5.2",
+        "typo3fluid/fluid": "^2.6"
+    },
+    "autoload": {
+        "psr-0": {"": "src/"}
+    }
+}
