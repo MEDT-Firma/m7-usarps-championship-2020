@@ -1,42 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Championship</title>
+  <meta charset="UTF-8">
+  <title>USARPS-Championship</title>
+
+    <style>
+        body {
+            background-image: url("assets/original.webp");
+            background-size: cover;
+            height: 100vh;
+          font-family: sans-serif;
+        }
+
+        .match {
+          display: flex;
+          background-color: rgba(0, 0, 0, .8);
+          color: white;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .match .player {
+          padding: 3rem;
+        }
+
+        .player .winner-img {
+          width: 2rem;
+        }
+
+        .match .player img {
+          width: 10rem;
+        }
+
+        .match .vs {
+          margin: 4rem;
+          font-size: 4rem;
+          font-weight: bold;
+        }
+    </style>
 </head>
 <body>
-<h1>USRPS Championship 12 / 08 / 2020</h1>
-<p>Match 1</p>
-<ul>Game 1
-    <li>Player: Herman vs. Martin</li>
-    <li>&#9996 vs. &#9995</li>
-    <li>Date: 12.08.2020</li>
-    <li>Time: 12:30 Uhr</li>
-</ul>
-<ul>Game 2
-    <li>Player: Herman vs. Martin</li>
-    <li>&#128074 vs. &#9995</li>
-    <li>Date: 12.08.2020</li>
-    <li>Time: 13:30 Uhr</li>
-</ul>
-<ul>Game 3
-    <li>Player: Herman vs. Martin</li>
-    <li>&#9996 vs. &#9995</li>
-    <li>Date: 12.08.2020</li>
-    <li>Time: 14:30 Uhr</li>
-</ul>
-<ul>Game 4
-    <li>Player: Herman vs. Martin</li>
-    <li>&#9996 vs. &#9995</li>
-    <li>Date: 12.08.2020</li>
-    <li>Time: 15:30 Uhr</li>
-</ul>
-<ul>Game 5
-    <li>Player: Herman vs. Martin</li>
-    <li>&#9996 vs. &#9995</li>
-    <li>Date: 12.08.2020</li>
-    <li>Time: 16:30 Uhr</li>
-</ul>
-
+  <div>
+    <div class="match">
+      <div class="player player1">
+        <img src="assets/fist.svg">
+        <p>Player 1</p>
+        <img class="winner-img" src="assets/winner.svg">
+      </div>
+      <p class="vs">VS</p>
+      <div class="player player2">
+        <img src="assets/fist.svg">
+        <p>Player 2</p>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
