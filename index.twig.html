@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>USARPS-Championship</title>
+
+    <style>
+        body {
+            background-image: url("assets/original.webp");
+            background-size: cover;
+            min-height: 100vh;
+          font-family: sans-serif;
+        }
+
+        .match {
+          display: flex;
+          background-color: rgba(0, 0, 0, .8);
+          color: white;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+        }
+
+        .match .player {
+          padding: 3rem;
+        }
+
+        .player .winner-img {
+          width: 2rem;
+        }
+
+        .match .player img {
+          width: 4rem;
+        }
+
+        .match .vs {
+          margin: 0 4rem;
+          font-size: 4rem;
+          font-weight: bold;
+        }
+
+        .match .middle {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .delete-entry {
+          border-radius: 6px;
+          background-color: white;
+          padding: 6px;
+          text-decoration: none;
+          color: black;
+        }
+    </style>
+</head>
+<body>
+  <div>
+    {% for match in matches %}
+
+    <div class="match">
+      <div class="player player1">
+        <img src="assets/{{ match.playerOneSymbol }}.svg">
+        <p>{{ match.playerOne }}</p>
+      </div>
+      <div class="middle">
+        <p class="vs">VS</p>
+        <p>{{ match.datetime }}</p>
+      </div>
+      <div class="player player2">
+        <img src="assets/{{ match.playerTwoSymbol }}.svg">
+        <p>{{ match.playerTwo }}</p>
+      </div>
+      <a href="delete.php?matchid={{ match.id }}" class="delete-entry">Delete</a>
+    </div>
+
+    {% endfor %}
+
+    <form action="insert.php" method="get">
+      <div class="match">
+        <div class="player player1">
+          <p>Player 1</p>
+          <select name="player1">
+            <option value="rock">Rock</option>
+            <option value="paper">Paper</option>
+            <option value="scissor">Scissor</option>
+          </select>
+        </div>
+        <div class="middle">
+          <p class="vs">VS</p>
+          <input name="datetime" type="date"/>
+        </div>
+        <div class="player player2">
+          <p>Player 2</p>
+          <select name="player2">
+            <option value="rock">Rock</option>
+            <option value="paper">Paper</option>
+            <option value="scissor">Scissor</option>
+          </select>
+        </div>
+        <button type="submit" class="delete-entry">Insert</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

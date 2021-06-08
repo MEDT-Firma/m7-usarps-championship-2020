@@ -18,6 +18,7 @@
           color: white;
           justify-content: center;
           align-items: center;
+          text-align: center;
         }
 
         .match .player {
@@ -29,13 +30,28 @@
         }
 
         .match .player img {
-          width: 10rem;
+          width: 4rem;
         }
 
         .match .vs {
-          margin: 4rem;
+          margin: 0 4rem;
           font-size: 4rem;
           font-weight: bold;
+        }
+
+        .match .middle {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .delete-entry {
+          border-radius: 6px;
+          background-color: white;
+          padding: 6px;
+          text-decoration: none;
+          color: black;
         }
     </style>
 </head>
@@ -43,15 +59,18 @@
   <div>
     <div class="match">
       <div class="player player1">
-        <img src="assets/fist.svg">
+        <img src="assets/rock.svg">
         <p>Player 1</p>
-        <img class="winner-img" src="assets/winner.svg">
       </div>
-      <p class="vs">VS</p>
+      <div class="middle">
+        <p class="vs">VS</p>
+        <p>2021-12-12</p>
+      </div>
       <div class="player player2">
-        <img src="assets/fist.svg">
+        <img src="assets/rock.svg">
         <p>Player 2</p>
       </div>
+      <a href="delete.php?matchid=1" class="delete-entry">Delete</a>
     </div>
   </div>
 </body>
