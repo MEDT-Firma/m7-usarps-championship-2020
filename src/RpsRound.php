@@ -35,9 +35,9 @@ class RpsRound
     protected string $playerTwoSymbol;
 
     /**
-     * @ORM\Column(type="datetime")
+     * @ORM\Column(type="string")
      */
-    protected datetime $datetime;
+    protected string $datetime;
 
     /**
      * @return mixed
