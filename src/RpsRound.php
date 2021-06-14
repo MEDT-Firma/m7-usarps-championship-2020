@@ -35,6 +35,31 @@ class RpsRound
     protected string $playerTwoSymbol;
 
     /**
+     * RpsRound constructor.
+     * @param string $playerOne
+     * @param string $playerOneSymbol
+     * @param string $playerTwo
+     * @param string $playerTwoSymbol
+     * @param string $datetime
+     */
+    public function __construct(string $playerOne, string $playerOneSymbol, string $playerTwo, string $playerTwoSymbol, string $datetime)
+    {
+        $this->playerOne = $playerOne;
+        $this->playerOneSymbol = $playerOneSymbol;
+        $this->playerTwo = $playerTwo;
+        $this->playerTwoSymbol = $playerTwoSymbol;
+        $this->datetime = $datetime;
+    }
+
+    /**
+     * @return int
+     */
+    public function getId(): int
+    {
+        return $this->id;
+    }
+
+    /**
      * @ORM\Column(type="string")
      */
     protected string $datetime;

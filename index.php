@@ -8,7 +8,6 @@ $twig = new \Twig\Environment($loader, [
 require_once __DIR__ . "/bootstrap.php";
 $entityManager = $entityManager ?? null;
 $match = $entityManager->getRepository("RpsRound")->findAll();
-var_dump($match);
 
 
 // Liste der Hotels kommt aus PHP 

@@ -80,8 +80,8 @@
     <form action="insert.php" method="get">
       <div class="match">
         <div class="player player1">
-          <p>Player 1</p>
-          <select name="player1">
+          <p>Player 1 <input name="player1name" type="text" placeholder="Name" required="required"></p>
+          <select name="player1" required="required">
             <option value="rock">Rock</option>
             <option value="paper">Paper</option>
             <option value="scissor">Scissor</option>
@@ -92,8 +92,8 @@
           <input name="datetime" type="date"/>
         </div>
         <div class="player player2">
-          <p>Player 2</p>
-          <select name="player2">
+          <p>Player 2 <input name="player2name" type="text" placeholder="Name" required="required"></p>
+          <select name="player2" required="required">
             <option value="rock">Rock</option>
             <option value="paper">Paper</option>
             <option value="scissor">Scissor</option>
@@ -103,5 +103,4 @@
       </div>
     </form>
   </div>
-</body>
-</html>
+</bod
