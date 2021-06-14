@@ -2,16 +2,16 @@
 require_once "bootstrap.php";
 require_once __DIR__ . "/src/RpsRound.php";
 
-$round1 = new RpsRound();
-$round2 = new RpsRound();
-$round3 = new RpsRound();
-$round4 = new RpsRound();
-$round5 = new RpsRound();
+$round1 = new RpsRound("", "", "", "", "");
+$round2 = new RpsRound("", "", "", "", "");
+$round3 = new RpsRound("", "", "", "", "");
+$round4 = new RpsRound("", "", "", "", "");
+$round5 = new RpsRound("", "", "", "", "");
 
 $round1->setPlayerOne('Murat Gürkem');
 $round1->setPlayerOneSymbol('rock');
 $round1->setPlayerTwo('Jeremy Pascal');
-$round1->setPlayerTwoSymbol('scissors');
+$round1->setPlayerTwoSymbol('scissor');
 $round1->setDatetime('2003-08-18 17:17:17');
 $entityManager->persist($round1);
 $entityManager->flush();
@@ -19,7 +19,7 @@ $entityManager->flush();
 $round2->setPlayerOne('Daniel Huber');
 $round2->setPlayerOneSymbol('paper');
 $round2->setPlayerTwo('Sabrina Gülle');
-$round2->setPlayerTwoSymbol('scissors');
+$round2->setPlayerTwoSymbol('scissor');
 $round2->setDatetime('2003-09-12 08:08:09');
 $entityManager->persist($round2);
 $entityManager->flush();
@@ -41,9 +41,9 @@ $entityManager->persist($round4);
 $entityManager->flush();
 
 $round5->setPlayerOne('Jasmin Anderson');
-$round5->setPlayerOneSymbol('scissors');
+$round5->setPlayerOneSymbol('scissor');
 $round5->setPlayerTwo('Sarah Engles');
-$round5->setPlayerTwoSymbol('scissors');
+$round5->setPlayerTwoSymbol('scissor');
 $round5->setDatetime('2110-01-01 09:34:37');
 $entityManager->persist($round5);
 $entityManager->flush();
